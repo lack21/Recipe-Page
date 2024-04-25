@@ -1,0 +1,175 @@
+// Recipe Page
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+// Colors
+$nutmeg: hsl(14, 45%, 36%);
+$darkRaspberry: hsl(332, 51%, 32%);
+$lightRaspberry: hsla(332, 51%, 32%, 0.075);
+$white: hsl(0, 0%, 100%);
+$roseWhite: hsl(330, 100%, 98%);
+$eggshell: hsl(30, 54%, 90%);
+$lightGrey: hsl(30, 18%, 87%);
+$wengeBrown: hsl(30, 10%, 34%);
+$darkCharcoal: hsl(24, 5%, 18%);
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: $eggshell;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+  margin: 1.45rem 0;
+
+  .list-item {
+    font-size: 0.925rem;
+    color: $wengeBrown;
+    padding-left: 1rem;
+
+    b {
+      padding-left: -1rem;
+    }
+  }
+}
+
+.heading {
+  font-size: 1.35rem;
+  font-family: "Young Serif", sans-serif;
+  color: $nutmeg;
+  font-weight: 400;
+  margin: 1.45rem 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $lightGrey;
+}
+
+// Main Element
+.main {
+  width: min(650px, 95vw);
+  background-color: $white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
+  margin: 3.25rem 0;
+
+  .image {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+  }
+
+  .title {
+    font-family: "Young Serif", sans-serif;
+    font-size: 1.8rem;
+    color: $darkCharcoal;
+    font-weight: 400;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .text {
+    font-size: 0.925rem;
+    color: $wengeBrown;
+  }
+
+  .box {
+    margin: 1.5rem 0;
+    padding: 1.75rem;
+    background-color: $lightRaspberry;
+    border-radius: 0.75rem;
+    -webkit-border-radius: 0.75rem;
+    -moz-border-radius: 0.75rem;
+    -ms-border-radius: 0.75rem;
+    -o-border-radius: 0.75rem;
+
+    .list {
+      margin: 0;
+    }
+
+    &-name {
+      color: $darkRaspberry;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .nutrition {
+    hr {
+      margin: 0.75rem 0;
+    }
+
+    .text {
+      margin-bottom: 1.55rem;
+    }
+
+    .text-box {
+      display: flex;
+
+      .name {
+        color: $wengeBrown;
+        font-size: 0.925rem;
+        font-weight: 400;
+        flex-basis: 100%;
+        padding-left: 1rem;
+      }
+
+      .amount {
+        color: $darkRaspberry;
+        flex-basis: 100%;
+        font-size: 0.925rem;
+      }
+    }
+  }
+}
+
+// For Mobile
+@media screen and (max-width: 564px) {
+  .main {
+    margin: 1.75rem 0;
+  }
+
+  .main .title {
+    font-size: 1.35rem;
+  }
+
+  .heading {
+    font-size: 1.1rem;
+  }
+
+  .main .box {
+    padding: 1.25rem;
+
+    &-name {
+      font-size: 1rem;
+    }
+  }
+
+  .main .list .list-item {
+    padding-left: 0.5rem;
+
+    b {
+      padding-left: -0.5rem;
+    }
+  }
+}
